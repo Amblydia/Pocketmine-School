@@ -21,3 +21,19 @@
   align-items: center;
   justify-content: center;
 }
+
+.hero {
+    border-bottom: 1px solid var(--hero-border-color);
+}
+
+.heroBtn {
+	background-color: var(--hero-btn-background-color);
+	color: var(--hero-btn-color);
+	border: 1px solid var(--hero-btn-border-color);
+}
+
+.heroBtn:hover {
+	background-color: var(--hero-btn-background-hover-color);
+	color: var(--hero-btn-hover-color);
+	text-decoration: none;
+}
