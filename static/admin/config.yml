@@ -1,7 +1,7 @@
 backend:
   name: github
   branch: main 
-  repo: https://github.com/Amblydia/Pocketmine-School
+  repo: Amblydia/Pocketmine-School
 
 # These lines should *not* be indented
 media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
