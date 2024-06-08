@@ -1,13 +1,17 @@
 ---
-title: First Blog Post
-slug: first-blog-post
+title: Welcome to PocketMine-School
+slug: welcome-to-pocketmine-school
 tags:
-  - foo
-  - bar
+  - pocketmine
+  - pmmp
+  - school
+  - tutorials
+  - minecraft
+  - bedrock
 authors:
-  - name: Garrison McMullen
-    title: Instruction Writer
-    url: https://github.com/garrison0
-    image_url: https://avatars.githubusercontent.com/u/4089393?v=4
+  - name: jeantkg
+    title: Amblydia CEO, PocketMine-School Maintainer
+    url: https://github.com/jeantkg
+    imageUrl: https://avatars.githubusercontent.com/u/102908437?v=4
 ---
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat.
+A test to see if decap cms works
