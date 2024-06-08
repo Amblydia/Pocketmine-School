@@ -1,22 +1,18 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import type {Options as IdealImageOptions} from '@docusaurus/plugin-ideal-image';
 
 const config: Config = {
-  title: 'Pocketmine-School',
-  tagline: 'Dinosaurs are cool',
+  title: 'PocketMine-School',
+  tagline: 'A Website To Teach Everything About PocketMine-MP',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://pocektmineschool.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,24 +24,35 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  plugins: [
+    [
+      'ideal-image',
 
+      {
+        quality: 70,
+        max: 1030,
+        min: 640,
+        steps: 2,
+        // Use false to debug, but it incurs huge perf costs
+        disableInDev: true,
+      } satisfies IdealImageOptions,
+    ],
+  ],
   presets: [
     [
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          routeBasePath: 'tutorials',
+          sidebarPath: 'sidebars.ts',
+          editUrl: 'https://github.com/Amblydia/Pocketmine-School/tree/main',
+          breadcrumbs: false,
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -55,73 +62,72 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/pocketmineschool.png',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     navbar: {
-      //title: 'Pocketmine-School',
       logo: {
-        alt: 'Pocketmine-School',
-        src: 'img/pocketmineschool-wbg.png',
+        alt: 'Pocketmine School',
+        src: 'img/pocketmineschool.png',
+        srcDark: 'img/pocketmineschool-wbg.png',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: 'tutorials', 
           position: 'left',
-          label: 'Tutorial',
+          label: 'Tutorials',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          to: 'blog', 
+          position: 'left',
+          label: 'Blogs',
+        },
+        {
+          href: 'https://github.com/Amblydia/Pocketmine-School', 
           position: 'right',
+          className: 'github-icon pseudo-icon',
+        },
+        {
+          href: 'https://discord.gg/nhZANhHdBV', 
+          position: 'right',
+          className: 'discord-icon pseudo-icon',
         },
       ],
     },
     footer: {
-      style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
         {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'PocketMine School Discord',
+              href: 'https://discord.gg/nhZANhHdBV',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'PocketMine Discord',
+              href: 'https://discord.gg/XDugAkJ',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Other Links',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Github',
+              href: 'https://github.com/Amblydia/Pocketmine-School',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <strong><a href="https://github.com/Amblydia">Amblydia</a></strong>.`,
     },
     prism: {
       theme: prismThemes.github,
