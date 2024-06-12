@@ -26,10 +26,10 @@ const Users: User[] = [
     tags: ['api'],
   },
   {
-    title: 'Customise',
-    description: 'Learn how to use Customise',
+    title: 'Customies',
+    description: 'Learn how to use Customies',
     preview: require('../../static/img/icon.png'),
-    website: 'customise',
+    website: 'customies',
     source: ' ',
     tags: ['api'],
   },
