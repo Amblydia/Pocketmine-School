@@ -1,11 +1,5 @@
 ---
 title: Tasks
-keywords: 
-   - coding 
-   - web development
-   - html
-   - introduction to html 
-   - what is html
 sidebar_label: Tasks
 sidebar_position: 8
 ---

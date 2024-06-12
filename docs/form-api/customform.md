@@ -1,4 +1,6 @@
 ---
+title: Custom Form
+sidebar_label: Custom Form
 sidebar_position: 4
 ---
 

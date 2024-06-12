@@ -1,4 +1,6 @@
 ---
+title: Simple Form
+sidebar_label: Simple Form
 sidebar_position: 2
 ---
 

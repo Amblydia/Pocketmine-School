@@ -1,4 +1,6 @@
 ---
+title: Model Form
+sidebar_label: Model Form
 sidebar_position: 3
 ---
 

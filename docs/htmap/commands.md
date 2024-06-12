@@ -1,11 +1,5 @@
 ---
 title: Commands
-keywords: 
-   - coding 
-   - web development
-   - html
-   - introduction to html 
-   - what is html
 sidebar_label: Commands
 sidebar_position: 6
 ---

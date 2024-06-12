@@ -1,11 +1,5 @@
 ---
 title: Further Learning
-keywords: 
-   - coding 
-   - web development
-   - html
-   - introduction to html 
-   - what is html
 sidebar_label: Further Learning
 sidebar_position: 9
 ---

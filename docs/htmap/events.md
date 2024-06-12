@@ -1,11 +1,5 @@
 ---
 title: Events
-keywords: 
-   - coding 
-   - web development
-   - html
-   - introduction to html 
-   - what is html
 sidebar_label: Events
 sidebar_position: 5
 ---
