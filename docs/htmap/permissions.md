@@ -1,4 +1,12 @@
 ---
+title: Permissions
+keywords: 
+   - coding 
+   - web development
+   - html
+   - introduction to html 
+   - what is html
+sidebar_label: Permissions
 sidebar_position: 7
 ---
 # Permissions

@@ -1,4 +1,12 @@
 ---
+title: Plugin Structure
+keywords: 
+   - coding 
+   - web development
+   - html
+   - introduction to html 
+   - what is html
+sidebar_label: Plugin Structure
 sidebar_position: 2
 ---
 # Plugin Structure

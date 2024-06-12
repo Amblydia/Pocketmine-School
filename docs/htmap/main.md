@@ -1,4 +1,12 @@
 ---
+title: Main
+keywords: 
+   - coding 
+   - web development
+   - html
+   - introduction to html 
+   - what is html
+sidebar_label: Main
 sidebar_position: 4
 ---
 # Main

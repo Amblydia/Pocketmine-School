@@ -1,4 +1,12 @@
 ---
+title: plugin.yml
+keywords: 
+   - coding 
+   - web development
+   - html
+   - introduction to html 
+   - what is html
+sidebar_label: plugin.yml
 sidebar_position: 3
 ---
 # plugin.yml
