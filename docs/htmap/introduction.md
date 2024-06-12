@@ -1,8 +1,15 @@
 ---
+title: Introduction
+keywords: 
+   - coding 
+   - web development
+   - html
+   - introduction to html 
+   - what is html
+sidebar_label: Introduction
 sidebar_position: 1
 slug: /htmap
 ---
-# Introduction
 
 ## What is a PocketMine-MP Plugin?
 

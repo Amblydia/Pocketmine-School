@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: form-api
+slug: /form-api
 ---
 
 # Intro

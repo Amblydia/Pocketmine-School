@@ -63,7 +63,7 @@ function TutorialCard({user}: {user: User}) {
       <div className="card__body">
         <div className={clsx(styles.tutorialCardHeader)}>
           <Heading as="h4" className={styles.tutorialCardTitle}>
-            <Link href={user.website} className={styles.tutorialCardLink}>
+            <Link to={`/docs/${user.website}`} className={styles.tutorialCardLink}>
               {user.title}
             </Link>
           </Heading>
