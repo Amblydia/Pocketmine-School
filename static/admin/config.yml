@@ -68,4 +68,16 @@ collections:
     - { name: body, label: Body, widget: markdown }
     - { name: slug, label: Slug, widget: string }
     - { name: sidebar_label, label: Sidebar Label, widget: string }
-    - { name: sidebar_position, label: Sidebar Position, widget: number } 
+    - { name: sidebar_position, label: Sidebar Position, widget: number }
+
+- name: camera-sysetm
+  label: "Camera System The basics"
+  folder: "docs/camera-system"
+  create: true
+  sortable_fields: ['sidebar_position']
+  fields:
+    - { name: title, label: Title, widget: string }
+    - { name: body, label: Body, widget: markdown }
+    - { name: slug, label: Slug, widget: string }
+    - { name: sidebar_label, label: Sidebar Label, widget: string }
+    - { name: sidebar_position, label: Sidebar Position, widget: number }  

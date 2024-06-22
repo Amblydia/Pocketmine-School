@@ -33,6 +33,14 @@ const Users: User[] = [
     source: ' ',
     tags: ['api'],
   },
+  {
+    title: 'Camera System',
+    description: '',
+    preview: require('../../static/img/icon.png'),
+    website: 'camera-system',
+    source: ' ',
+    tags: ['api'],
+  }
 ];
 
 export type User = {
