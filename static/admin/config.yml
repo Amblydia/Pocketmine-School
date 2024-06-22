@@ -70,7 +70,7 @@ collections:
     - { name: sidebar_label, label: Sidebar Label, widget: string }
     - { name: sidebar_position, label: Sidebar Position, widget: number }
 
-- name: camera-sysetm
+- name: camera-system
   label: "Camera System The basics"
   folder: "docs/camera-system"
   create: true
