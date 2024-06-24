@@ -1,14 +1,16 @@
 import {translate} from '@docusaurus/Translate';
 import {sortBy} from '@site/src/utils/jsUtils';
 
-export type TagType =
-  | 'favorite'
-  | 'api'
-  | 'development'
-  | 'serversetup'
-  | 'client';
+export type Tutorial = {
+  title: string;
+  description: string;
+  preview: string | null; // null = use our serverless screenshot service
+  website: string;
+  source: string | null;
+  tags: TagType[];
+};
 
-const Users: User[] = [
+const Tutorials: Tutorial[] = [
   {
     title: 'Creating Plugins',
     description: 'Learn how to create Pocketmine Plugins',
@@ -40,17 +42,22 @@ const Users: User[] = [
     website: 'camera-system',
     source: ' ',
     tags: ['api'],
+  },
+  {
+    title: 'Pharynx',
+    description: '',
+    preview: require('../../static/img/icon.png'),
+    website: 'pharynx',
+    source: ' ',
+    tags: ['api'],
   }
 ];
 
-export type User = {
-  title: string;
-  description: string;
-  preview: string | null; // null = use our serverless screenshot service
-  website: string;
-  source: string | null;
-  tags: TagType[];
-};
+export type TagType =
+  | 'api'
+  | 'development'
+  | 'serversetup'
+  | 'client';
 
 export type Tag = {
   label: string;
@@ -59,15 +66,6 @@ export type Tag = {
 };
 
 export const Tags: {[type in TagType]: Tag} = {
-  favorite: {
-    label: translate({message: 'Favorite'}),
-    description: translate({
-      message: '',
-      id: 'tutorial.tag.favorite.description',
-    }),
-    color: '#e9669e',
-  },
-
   api: {
     label: translate({message: 'Api'}),
     description: translate({
@@ -106,13 +104,12 @@ export const Tags: {[type in TagType]: Tag} = {
 };
 
 export const TagList = Object.keys(Tags) as TagType[];
-function sortUsers() {
-  let result = Users;
+
+function sortTutorials() {
+  let result = Tutorials;
   // Sort by site name
-  result = sortBy(result, (user) => user.title.toLowerCase());
-  // Sort by favorite tag, favorites first
-  result = sortBy(result, (user) => !user.tags.includes('favorite'));
+  //result = sortBy(result, (user) => user.title.toLowerCase());
   return result;
 }
 
-export const sortedUsers = sortUsers();
+export const sortedUsers = sortTutorials();
