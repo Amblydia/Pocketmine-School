@@ -1,12 +1,13 @@
 ---
-title: Welcome to PocketMine-School
+title: Welcome to PocketMine School
+description: a test description for the cms
 slug: welcome-to-pocketmine-school
-tags:
-  - update
 authors:
   - name: jeantkg
     title: Amblydia CEO, PocketMine-School Maintainer
     url: https://github.com/jeantkg
-    imageUrl: https://avatars.githubusercontent.com/u/102908437?v=4
+    image_url: https://github.com/jeantkg.png
+tags: [release]
+image: 
 ---
 A test to see if decap cms works
