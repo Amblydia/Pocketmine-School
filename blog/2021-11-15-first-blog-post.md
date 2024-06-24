@@ -8,6 +8,6 @@ authors:
     url: https://github.com/jeantkg
     image_url: https://github.com/jeantkg.png
 tags: [release]
-image: 
+image: https://i.imgur.com/mErPwqL.png
 ---
 A test to see if decap cms works
