@@ -2,12 +2,7 @@
 title: Welcome to PocketMine-School
 slug: welcome-to-pocketmine-school
 tags:
-  - pocketmine
-  - pmmp
-  - school
-  - tutorials
-  - minecraft
-  - bedrock
+  - update
 authors:
   - name: jeantkg
     title: Amblydia CEO, PocketMine-School Maintainer

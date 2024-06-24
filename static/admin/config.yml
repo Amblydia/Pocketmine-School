@@ -13,15 +13,24 @@ publish_mode: editorial_workflow
 collections:
   - name: 'blog' 
     label: 'Blog' 
-    folder: 'blog' 
-    create: true 
+    folder: 'blog'
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}' 
     fields: 
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - label: 'Authors' 
+        name: 'authors'
+        widget: 'list'
+        fields:
+          - { label: 'Name', name: 'name', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'URL', name: 'url', widget: 'string' }
+          - { label: 'Image', name: 'image_url', widget: 'string' }
+          - { label: 'Email', name: 'email', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'select', multiple: true, options: ['update', 'release'] }
+      - { label: 'Image', name: 'image', widget: 'image'}
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
-      - { label: 'Rating (scale of 1-5)', name: 'rating', widget: 'number' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
   - name: 'htmap'
