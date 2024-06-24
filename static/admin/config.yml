@@ -6,18 +6,17 @@ backend:
   repo: Amblydia/Pocketmine-School
   open_authoring: true
 
-# These lines should *not* be indented
-media_folder: "static/img/*" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/img/" 
+public_folder: "/img/" 
 publish_mode: editorial_workflow
 
 collections:
-  - name: 'blog' # Used in routes, e.g., /admin/collections/blog
-    label: 'Blog' # Used in the UI
-    folder: 'blog' # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' # Filename template, e.g., yyyy-MM-dd-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: 'blog' 
+    label: 'Blog' 
+    folder: 'blog' 
+    create: true 
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}' 
+    fields: 
       - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'blog' }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
@@ -25,87 +24,87 @@ collections:
       - { label: 'Rating (scale of 1-5)', name: 'rating', widget: 'number' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
-  - name: 'docs'
+  - name: 'htmap'
     label: 'HTMAP'
-    folder: docs/htmap
+    folder: 'docs/htmap'
     create: true
+    summary: '{{sidebar_position}} - {{title}}'
+    sortable_fields:
+      fields: ['sidebar_position']
+      default:
+        field: sidebar_position
+        direction: Ascending
     fields:
       - { name: title, label: Title, widget: string }
       - { name: slug, label: Slug, widget: string }
       - { name: sidebar_label, label: Sidebar Label, widget: string }
-      - { name: sidebar_position, label: Sidebar Position, widget: number } 
+      - { name: sidebar_position, label: Sidebar Position, widget: number, value_type: 'int', min: 1 } 
       - { name: body, label: Body, widget: markdown }
 
+  - name: 'form-api'
+    label: 'FormAPI'
+    folder: 'docs/form-api'
+    create: true
+    summary: '{{sidebar_position}} - {{title}}'
+    sortable_fields:
+      fields: ['sidebar_position']
+      default:
+        field: sidebar_position
+        direction: Ascending
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: sidebar_label, label: Sidebar Label, widget: string }
+      - { name: sidebar_position, label: Sidebar Position, widget: number, value_type: 'int', min: 1 } 
+      - { name: body, label: Body, widget: markdown }
 
-# collections:
-# - name: blog
-#   label: "blog"
-#   folder: blog
-#   identifier_field: title
-#   extension: md
-#   widget: "list"
-#   create: true
-#   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-#   fields:
-#     - { name: title, label: Title, widget: string }
-#     - { name: body, label: Body, widget: markdown }
-#     - { name: slug, label: Slug, widget: string }
-#     - label: "Tags"
-#       name: "tags"
-#       widget: "list"
-#     - label: "Authors"
-#       name: "authors" 
-#       widget: "list"
-#       fields:
-#         - { name: name, label: Name, widget: string }
-#         - { name: title, label: Title, widget: string } 
-#         - { name: url, label: URL, widget: string } 
-#         - { name: imageUrl, label: ImageURL, widget: string } 
+  - name: 'customies'
+    label: 'Customies'
+    folder: 'docs/customies'
+    create: true
+    summary: '{{sidebar_position}} - {{title}}'
+    sortable_fields:
+      fields: ['sidebar_position']
+      default:
+        field: sidebar_position
+        direction: Ascending
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: sidebar_label, label: Sidebar Label, widget: string }
+      - { name: sidebar_position, label: Sidebar Position, widget: number, value_type: 'int', min: 1 } 
+      - { name: body, label: Body, widget: markdown }
 
-# - name: htmap
-#   label: "How To Make A Plugin"
-#   folder: "docs/htmap"
-#   create: true
-#   sortable_fields: ['sidebar_position']
-#   fields:
-#     - { name: title, label: Title, widget: string }
-#     - { name: body, label: Body, widget: markdown }
-#     - { name: slug, label: Slug, widget: string }
-#     - { name: sidebar_label, label: Sidebar Label, widget: string }
-#     - { name: sidebar_position, label: Sidebar Position, widget: number } 
+  - name: 'camera-system'
+    label: 'Camera System'
+    folder: 'docs/camera-system'
+    create: true
+    summary: '{{sidebar_position}} - {{title}}'
+    sortable_fields:
+      fields: ['sidebar_position']
+      default:
+        field: sidebar_position
+        direction: Ascending
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: sidebar_label, label: Sidebar Label, widget: string }
+      - { name: sidebar_position, label: Sidebar Position, widget: number, value_type: 'int', min: 1 } 
+      - { name: body, label: Body, widget: markdown }
 
-# - name: form-api
-#   label: "How To Use FormAPI"
-#   folder: "docs/form-api"
-#   create: true
-#   sortable_fields: ['sidebar_position']
-#   fields:
-#     - { name: title, label: Title, widget: string }
-#     - { name: body, label: Body, widget: markdown }
-#     - { name: slug, label: Slug, widget: string }
-#     - { name: sidebar_label, label: Sidebar Label, widget: string }
-#     - { name: sidebar_position, label: Sidebar Position, widget: number } 
-
-# - name: customies
-#   label: "How To Use Customies"
-#   folder: "docs/customies"
-#   create: true
-#   sortable_fields: ['sidebar_position']
-#   fields:
-#     - { name: title, label: Title, widget: string }
-#     - { name: body, label: Body, widget: markdown }
-#     - { name: slug, label: Slug, widget: string }
-#     - { name: sidebar_label, label: Sidebar Label, widget: string }
-#     - { name: sidebar_position, label: Sidebar Position, widget: number }
-
-# - name: camera-system
-#   label: "Camera System The basics"
-#   folder: "docs/camera-system"
-#   create: true
-#   sortable_fields: ['sidebar_position']
-#   fields:
-#     - { name: title, label: Title, widget: string }
-#     - { name: body, label: Body, widget: markdown }
-#     - { name: slug, label: Slug, widget: string }
-#     - { name: sidebar_label, label: Sidebar Label, widget: string }
-#     - { name: sidebar_position, label: Sidebar Position, widget: number }  
+  - name: 'pharynx'
+    label: 'Pharynx'
+    folder: 'docs/pharynx'
+    create: true
+    summary: '{{sidebar_position}} - {{title}}'
+    sortable_fields:
+      fields: ['sidebar_position']
+      default:
+        field: sidebar_position
+        direction: Ascending
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: sidebar_label, label: Sidebar Label, widget: string }
+      - { name: sidebar_position, label: Sidebar Position, widget: number, value_type: 'int', min: 1 } 
+      - { name: body, label: Body, widget: markdown }
