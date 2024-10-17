@@ -4,9 +4,6 @@ sidebar_label: Introduction
 sidebar_position: 1
 slug: /form-api
 ---
-
-# Intro
-
 ## What's FormAPI?
 
 FormAPI is a simple API for creating forms for Minecraft PE/BE clients.  

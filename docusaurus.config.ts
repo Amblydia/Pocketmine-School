@@ -44,6 +44,7 @@ const config: Config = {
 			'classic',
 			{
 				docs: {
+					breadcrumbs: false,
 					sidebarPath: 'sidebars.ts',
 					editUrl: 'https://github.com/Amblydia/Pocketmine-School/tree/main',
 				},
@@ -127,7 +128,8 @@ const config: Config = {
 		},
 		prism: {
 			theme: prismThemes.github,
-			darkTheme: prismThemes.dracula,
+			darkTheme: prismThemes.vsDark,
+			additionalLanguages: ['php'],
 		},
 	} satisfies Preset.ThemeConfig,
 };

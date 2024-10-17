@@ -15,8 +15,7 @@ use jojoe77777\FormAPI\SimpleForm;
 Now lets make a function to add our form in it.
 
 ```php
-public function testForm($player) 
-{
+public function testForm($player) {
     //This is where we will add our form.
 }
 ```
@@ -24,8 +23,7 @@ public function testForm($player)
 In the function we will add our form:
 
 ```php
-public function testForm($player)
-{
+public function testForm($player) {
     $form = new SimpleForm(function(Player $player, $data) {
         if($data === null){
             //The form has been closed by the player
@@ -42,8 +40,7 @@ public function testForm($player)
 Let us set the title of the form.
 
 ```php
-public function testForm($player)
-{
+public function testForm($player) {
     $form = new SimpleForm(function(Player $player, $data) {
         if($data === null){
             return true;
@@ -72,8 +69,7 @@ Example:
 Let us add a description to the form.
 
 ```php
-public function testForm($player)
-{
+public function testForm($player) {
     $form = new SimpleForm(function(Player $player, $data) {
         if($data === null){
             return true;
@@ -94,8 +90,7 @@ public function testForm($player)
 Let us add a button to the form.
 
 ```php
-public function testForm($player)
-{
+public function testForm($player) {
     $form = new SimpleForm(function(Player $player, $data) {
         if($data === null){
             return true;
@@ -118,8 +113,7 @@ public function testForm($player)
 What about adding multiple buttons? Well you can.
 
 ```php
-public function testForm($player)
-{
+public function testForm($player) {
     $form = new SimpleForm(function(Player $player, $data) {
         if($data === null){
             return true;
@@ -149,8 +143,7 @@ public function testForm($player)
 Want to add a Image next to your button here's how:
 
 ```php
-public function testForm($player)
-{
+public function testForm($player) {
     $form = new SimpleForm(function(Player $player, $data) {
         if($data === null){
             return true;
@@ -168,8 +161,7 @@ public function testForm($player)
 Here's another example of multiple buttons with a image:
 
 ```php
-public function testForm($player)
-{
+public function testForm($player) {
     $form = new SimpleForm(function(Player $player, $data) {
         if($data === null){
             return true;
